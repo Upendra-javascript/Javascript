@@ -1,0 +1,201 @@
+<html>
+<head>
+	  <title>Amazon Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  .navbar-brand{
+  	font-size:40px;
+  }
+  .container {
+  	margin-top:100px;
+  }
+</style>
+</head>
+</head>
+<body>
+	<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">Amazon</a>
+</nav>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-3">
+			<div class="form-group">
+               <label for="user">User list:</label>
+                  <select class="form-control" id="sel1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                    <option>22</option>
+                  </select>
+            </div>  
+		</div>
+		<div class="col-sm-3">
+			<div class="form-group">
+               <label for="user">User list:</label>
+                  <select class="form-control" id="sel1">
+                    <option>shreeja</option>
+                    <option>kchaitra</option>
+                    <option>mchit</option>
+                    <option>khushaln</option>
+                    <option>brundap</option>
+                    <option>nandans</option>
+                    <option>authappa</option>
+                    <option>tdpa</option>
+                    <option>vineetak</option>
+                    <option>lavanyg </option>
+                    <option>msants</option>
+                    <option>nsbht</option>
+                    <option>ahmnagma</option>
+                    <option>krsreera</option>
+                    <option>anjsinha</option>
+                    <option>athulyae</option>
+                    <option>bsingham</option>
+                    <option>ganebabu</option>
+                    <option>rshweth</option>
+                    <option>palapalk</option>
+                    <option>mmohanaa</option>
+                  </select>
+            </div>  
+		</div>
+		<div class="col-sm-3">
+			       <div class="form-group">
+			       	<label for="date">Date :</label>
+       <div class="form-group">
+            <div class='input-group date' id='datetimepicker8'>
+                <input type='date' class="form-control" />
+            </div>
+        </div>
+    </div>
+</div>
+		</div>
+		<div class="col-sm-3">
+		</div>
+	</div>
+	<div class="container data">
+		<div class="col-sm-3">
+				<div class="row">
+			<div class="form-group">
+               <label for="user">Task:</label>
+                  <select class="form-control" id="sel1">
+                    <option>Proportional stratified Sampling</option>
+                    <option>CDS</option>
+                    <option>UTC</option>
+                    <option>CHM_NA_Wireless(Nov)_nsbht</option>
+                    <option>CHM_IN_Wireless(Nov)_Chitra</option>
+                    <option>CHM_IN_Drugstore(Nov)_lavanyg</option>
+                    <option>Nailpolish_04022019</option>
+                    <option>Incorrect UTC</option>
+                    <option>Targeted Audit</option>
+                    <option>Team Meeting</option>
+                    <option>Document preparation</option>
+                    <option>Tracker update</option>
+                    <option>5 WHY analysis</option>
+                    <option>SIM follow up</option>
+                    <option>Hazzbuzz</option>
+                    <option>Other meeting</option>
+                    <option>Calibration</option>
+                    <option>Others</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+    	<div class="row">
+    	</div>
+    </div>
+  </div> 
+   
+</body>
+</html>
+
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+         
+          
+              
+       
+   
+         
+          
+            
+
+     
+          
+         
+         
+       
+      
+
+
+
+
+
+	getPartialflag(){
+		let applicationId = this.alsInfoService.getApplicationId();
+		let action : string = AlsRequestUrls.APPLICATION_PARIALFLAG;
+		let params = {
+			"request":{
+				"APPLICATION_ID":applicationId,
+				"PARTIAL_DATA_FLAG": false
+			}
+		}
+		this.commonService.makeRequestWithAction(params,action).subscribe(
+			data =>{
+              this.loader.hideLoader()
+			},
+			error => {
+				this.loader.hideLoader();
+				this.webUtilityService.getApplitteralError();
+			}
+		)
+
+	}
+}
+
+					this.getPartialflag();
+
+
+						APPLICATION_PARIALFLAG:'/v2/application/partial/update'

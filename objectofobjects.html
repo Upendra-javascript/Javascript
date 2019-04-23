@@ -1,0 +1,35 @@
+<html>
+<head>
+	</head>
+	<body>
+		<script>
+			const obj = {
+ name:"Manjunath",
+ age:"24",
+ contact:{
+   phone:"9740553322",
+   email:"manju@gmail.com",
+   blurr:{
+     ab:"dd",
+     cc:"dew",
+     ss:{
+       ff:"oo"
+     }
+   }
+ }
+}
+
+function through(obj){
+ let val = Object.values(obj);
+ for(let i of val){
+    if(typeof i === 'object'){
+         through(i);
+     }else{
+         console.log(i)
+     } 
+ }
+}
+through(obj);
+		</script>
+	</body>
+</html>

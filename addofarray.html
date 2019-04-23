@@ -1,0 +1,86 @@
+<html>
+<head>
+</head>
+<body>
+<script> 
+	// sum of min max
+	const array = [3,2,5,7,9];
+	let newArray= [];
+	let sum = 0;
+	let sumBig = 0;
+	let sortedArray = array.sort( (a,b) => a-b)
+	// console.log(sortedArray);
+	for(let i=0;i<sortedArray.length;i++){
+		if(i < sortedArray.length-1){
+			sum += sortedArray[i];
+		}
+		if(i !=0){
+		sumBig += sortedArray[i];	
+		}
+	}
+	newArray.push(sum);
+	newArray.push(sumBig);
+	// console.log(newArray)
+
+    // avg of positive,negative,zeros
+    const declareArray = [3,4,5,-4,-5,0,0];
+    const finalArray = []
+    let positive = 0;
+    let negative = 0
+    let zeros = 0;
+    for(let i=0;i < declareArray.length;i++){
+    	if(declareArray[i]>0){
+           positive++;
+    	}else if(declareArray[i]<0){
+    		negative++
+    	}else{
+    		zeros++
+    	}
+    }
+    finalArray.push(positive/declareArray.length);
+    finalArray.push(negative/declareArray.length);
+    finalArray.push(zeros/declareArray.length)
+    console.log(finalArray);
+
+     // numbers between 1 to 100 divided by 3 and divided by 5 and both 3 and 5 to display fizz and bizz
+     for (let i=1;i<= 100 ;i++){
+     	if (i%3 == 0 && i%5 == 0){
+     		console.log(i + ' - fizzbizz')
+     	}else if(i%5 == 0){
+     		console.log(i + ' - bizz')
+     	}else if ( i%3 == 0){
+     		console.log(i + ' - fizz')
+     	}
+     }
+
+	//  prime numbers between 1 to 100
+	// for (let limit=1;limit <= 100 ; limit++ ){
+	// 	const a = false;
+	// 	for (let i = 2 ;i <= limit ; i++){
+	// 		if(limit %i === 0 && i! =limit){
+	// 			const a= true;
+	// 		}
+	// 	}
+	// 	if(a === false){
+	// 		console.log(limit);
+	// 	}
+	// }
+		const arrayNumber =[2,3,4,6,7];
+		const emptyNumber = [];
+		const anotherNumber = [];
+		const finalNumberarray=[]
+		for(let i=0;i<arrayNumber.length;i++){
+           if(i>1){
+			//    emptyNumber.push(arrayNumber[i])
+			emptyNumber[i] = arrayNumber[i] 
+		   }else{
+			   anotherNumber.push(arrayNumber[i])
+		   }
+		}
+        finalNumberarray.push(emptyNumber);
+		emptyNumber.push(anotherNumber);
+		console.log(finalNumberarray);
+</script>
+
+</body>
+</html>

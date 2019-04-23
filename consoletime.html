@@ -1,0 +1,22 @@
+<html>
+<head>
+</head>
+<body>
+	<script>
+		function fn1(){
+			console.log('Hello')
+		}
+		function fn2(){
+			console.log('hai')
+		}
+
+		functionArr = [fn1,fn2];
+		newfunction = settimedate(callfunction(),1000);
+		function callfunction(){
+			for(let i =0;i<functionArr.length;i++){
+				functionArr[i].call(functionArr[i])
+			}
+		}
+	</script>
+</body>
+</html>

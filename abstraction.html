@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <script>
+        function Circle(radius){
+            this.radius = radius;
+            let computeOptimumLOcation = function(factor){
+
+            }
+            this.draw = function(){
+                computeOptimumLOcation(0.1);
+                console.log('draw');
+            };
+        }
+        const circle = new Circle(10);
+        circle.draw();
+
+        function Outer(){
+            let a =10;
+            function Inner(){
+                let b = 20;
+                console.log(a+b);
+            }
+            return Inner;
+        }
+        var x = Outer();
+        var x = Outer();
+        console.log(x);
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<head>
+	</head>
+	<body>
+		<script>
+			let finalArray = [];
+			let array = [{"ACCOMMODATION_TYPE": "TWL_FAMILY_OWNED",
+"PERMANENT_ADDRESS_FLAG": "Yes",
+"PINCODE": "518301",
+"RESIDENCE_SINCE": "03/2016",
+"RESIDENCE_TYPE": "TWL_OWNED"},
+{
+  "ACCOMMODATION_TYPE": "TWL_FAMILY_OWNED",
+   "PERMANENT_ADDRESS_FLAG": "Yes",
+"PINCODE": "518301",
+"RESIDENCE_SINCE": "03/2016",
+"RESIDENCE_TYPE": "TWL_RENTED"
+}]
+
+			array.forEach(item => {
+                    finalArray.push(item.RESIDENCE_TYPE)			
+		})
+		</script>
+		{{display}}
+	</body>
+</html>

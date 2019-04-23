@@ -1,0 +1,50 @@
+<html>
+<body>
+
+	<h1> Hello world </h1>
+	<span> {{result}}</span>
+	<script>
+let arr =  [-3,-5,6,3,4,0,-6];
+
+
+function counter(arr){
+	var counter = [0,0,0];
+	let total = arr.length;
+	arr.forEach(function(a){
+		if(a<0){
+			counter[0]++;		
+	    }else if (a >0 ){
+	    	counter[2]++;
+	    }else
+	      counter[1]++;
+	});
+	return counter;
+}
+
+let result = counter(arr);
+let final=result.map((e)=>{
+   return e/arr.length
+})
+console.log(final);
+// alert ('lements are :' + final);
+
+
+
+function createTickets() {
+const ticket = {};
+const tickets = [];
+for (let i = 0; i < 10; i++) {
+ticket['id'] = i;
+// console.log(ticket.id );
+this.tickets.push(ticket);
+}
+console.log(this.tickets);
+}
+
+</script>
+</body>
+</html>
+
+
+
+}
